@@ -1,0 +1,25 @@
+node_modules
+
+# Ignore node_modules directory
+node_modules
+
+# Ignore build output
+/.next
+
+# Ignore development server log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.bak
+*.swp
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
