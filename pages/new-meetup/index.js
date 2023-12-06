@@ -1,7 +1,8 @@
 // our-domain.com/new-meetup
 import { useRouter } from 'next/router';
-
 import NewMeetupForm from '../../components/meetups/NewMeetupForm';
+import { Fragment } from 'react';
+import Head from 'next/head';
 
 function NewMeetupPage() {
   const router = useRouter();
@@ -11,8 +12,8 @@ function NewMeetupPage() {
       method: 'POST',
       body: JSON.stringify(enteredMeetupData),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+      },
     });
 
     const data = await response.json();
@@ -22,7 +23,18 @@ function NewMeetupPage() {
     router.push('/');
   }
 
-  return <NewMeetupForm onAddMeetup={addMeetupHandler} />
+  return (
+    <Fragment>
+      <Head>
+        <title>Add Meetups</title>
+        <meta
+          name="description"
+          content="Add your own meetups and create amazing networking opportunities."
+        />
+      </Head>
+      <NewMeetupForm onAddMeetup={addMeetupHandler} />
+    </Fragment>
+  );
 }
 
 export default NewMeetupPage;
