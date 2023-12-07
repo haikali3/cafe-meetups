@@ -14,7 +14,7 @@ function HomePage(props) {
           content="Browse a huge list of highly active dev meetups"
         />
       </Head>
-      <MeetupList meetups={props.meetups} />;
+      <MeetupList meetups={props.meetups} />
     </Fragment>
   );
 }
@@ -30,7 +30,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      meetups: meetups.map((meetup) => ({
+      meetups: meetups.reverse().map((meetup) => ({
         title: meetup.title,
         address: meetup.address,
         image: meetup.image,
