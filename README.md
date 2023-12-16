@@ -1,6 +1,6 @@
 # Cafe Meetups - Next.js App
 
-![Cafe Meetups](https://github.com/haikali3/cafe-meetups/blob/main/cafe.png?raw=true)
+![Cafe Meetups](https://github.com/haikali3/cafe-meetups/blob/main/public/cafe.PNG)
 
 ## Table of Contents
 
